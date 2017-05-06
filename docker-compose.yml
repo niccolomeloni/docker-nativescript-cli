@@ -7,4 +7,4 @@ services:
             - /dev/bus/usb:/dev/bus/usb
             - .:/tns
         privileged: true
-        command: tns livesync android --watch
+        command: tns run android

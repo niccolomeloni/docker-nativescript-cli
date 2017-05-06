@@ -48,10 +48,10 @@ RUN echo y | ${ANDROID_HOME}/tools/android update sdk --all --no-ui --filter pla
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 RUN npm install nativescript -g --unsafe-perm && \
-    tns error-reporting disable
+    tns error-reporting disable && \
+    tns usage-reporting disable
 
 RUN chown tns:tns -R ${ANDROID_HOME} /tns
-#RUN chown root:root -R ${ANDROID_HOME} /tns
 
 USER tns
 
