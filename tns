@@ -1,0 +1,3 @@
+#!/bin/sh
+export PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin
+docker run -it --rm --privileged -v /dev/bus/usb:/dev/bus/usb -v $(pwd):/tns niccolomeloni/docker-nativescript-cli tns $@

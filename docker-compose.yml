@@ -1,0 +1,10 @@
+version: "3"
+
+services:         
+    tns:
+        images: niccolomeloni/docker-nativescript-cli
+        volumes:
+            - /dev/bus/usb:/dev/bus/usb
+            - .:/tns
+        privileged: true
+        command: tns livesync android --watch
